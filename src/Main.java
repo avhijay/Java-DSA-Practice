@@ -21,7 +21,7 @@ public  class  Main {
 //
 //
 //
-         mylinkedList.printList();
+       //   mylinkedList.printList();
 //         mylinkedList.getHead();
 //         mylinkedList.getTail();
 //         mylinkedList.getLength();
@@ -56,7 +56,7 @@ public  class  Main {
 //mylinkedList.printList();
 
 
-//DoublyLinkedList newOne = new DoublyLinkedList(9);
+DoublyLinkedList newOne = new DoublyLinkedList(9);
 //newOne.getTail();
 //newOne.append(10);
 //newOne.append(11);
