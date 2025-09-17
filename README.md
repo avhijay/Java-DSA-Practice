@@ -4,11 +4,12 @@ This repository contains my practice code for learning Data Structures and Algor
 I am using IntelliJ IDEA for coding the basics and building my own implementations.
 
 ## What's inside
-- Linked List (basic insert, append, delete)
+- Linked List 
 - Doubly Linked List
 - Stack
 - Queue
-- Binary Search Tree (insert/search)
+- Binary Search Tree
+- Hash table
 - String operations (reverse, palindrome, etc.)
 - A main class to test/run everything
 
