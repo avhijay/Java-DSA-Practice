@@ -1,7 +1,9 @@
 import java.sql.SQLOutput;
 
+
 public  class  Main {
      public static void main(String[] args) {
+
 
 
           //LINKED LIST:
@@ -12,6 +14,8 @@ public  class  Main {
 //         mylinkedList.append(5);
 //         mylinkedList.append(6);
 //         mylinkedList.set(1,987);
+
+
 
 
 
@@ -91,11 +95,22 @@ DoublyLinkedList newOne = new DoublyLinkedList(9);
           newHash.set("Lime", 2180);
 
 //         newHash.printHash();
-
-
          System.out.println(newHash.get("Fig"));
-
-
          System.out.println(newHash.keys());
+
+
+
+
+
+
+
+
+
+
+
+
+
      }
- }
+
+
+}
