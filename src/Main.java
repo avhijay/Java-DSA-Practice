@@ -1,3 +1,4 @@
+import javax.naming.NamingEnumeration;
 import java.sql.SQLOutput;
 
 
@@ -83,23 +84,37 @@ DoublyLinkedList newOne = new DoublyLinkedList(9);
 //         newHash.set("Blackberry", 622);
 //         newHash.set("Coconut", 725);
 //         newHash.set("Dates", 829);
-         newHash.set("Fig", 933);
-         newHash.set("Pomegranate", 1037);
-         newHash.set("Dragonfruit", 1140);
-        newHash.set("Jackfruit", 1244);         newHash.set("Durian", 1348);
-         newHash.set("Lychee", 1452);
-         newHash.set("Tamarind", 1556);
-         newHash.set("Mulberry", 1660);
-         newHash.set("Cranberry", 1764);
-         newHash.set("Gooseberry", 1868);
-          newHash.set("Lime", 2180);
+//         newHash.set("Fig", 933);
+//         newHash.set("Pomegranate", 1037);
+//         newHash.set("Dragonfruit", 1140);
+//        newHash.set("Jackfruit", 1244);         newHash.set("Durian", 1348);
+//         newHash.set("Lychee", 1452);
+//         newHash.set("Tamarind", 1556);
+//         newHash.set("Mulberry", 1660);
+//         newHash.set("Cranberry", 1764);
+//         newHash.set("Gooseberry", 1868);
+//          newHash.set("Lime", 2180);
+//
+////         newHash.printHash();
+//         System.out.println(newHash.get("Fig"));
+//         System.out.println(newHash.keys());
 
-//         newHash.printHash();
-         System.out.println(newHash.get("Fig"));
-         System.out.println(newHash.keys());
+
+//----Graph---
+
+         Graph newGraph = new Graph();
+         newGraph.addVertex("A");
+         newGraph.addVertex("B");
+         newGraph.addVertex("C");
+         newGraph.addVertex("D");
 
 
+         newGraph.addEdge("A","B");
+         newGraph.addEdge("C","D");
+         newGraph.printGraph();
 
+         newGraph.removeEdge("A","B");
+         newGraph.printGraph();
 
 
 
