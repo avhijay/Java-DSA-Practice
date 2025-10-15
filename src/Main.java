@@ -110,11 +110,16 @@ DoublyLinkedList newOne = new DoublyLinkedList(9);
 
 
          newGraph.addEdge("A","B");
+         newGraph.addEdge("A","C");
+         newGraph.addEdge("A","D");
+         newGraph.addEdge("B","D");
          newGraph.addEdge("C","D");
          newGraph.printGraph();
 
-         newGraph.removeEdge("A","B");
-         newGraph.printGraph();
+//         newGraph.removeEdge("A","B");
+
+        newGraph.removeVertex("D");
+        newGraph.printGraph();
 
 
 

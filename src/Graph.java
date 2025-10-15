@@ -42,6 +42,19 @@ public boolean removeEdge(String vertex1 , String vertex2) {
 }
 
 
+public boolean removeVertex(String vertex){
+        if(adjacencyList.get(vertex)==null)return false;
+
+     ArrayList<String> toRemove = new ArrayList<>( adjacencyList.get(vertex));
+     for(String string :toRemove){
+         adjacencyList.get(string).remove(vertex);
+     }
+     adjacencyList.remove(vertex);
+     return  true ;
+
+}
+
+
 
 }
 
