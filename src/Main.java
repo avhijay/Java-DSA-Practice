@@ -120,6 +120,17 @@ DoublyLinkedList newOne = new DoublyLinkedList(9);
 
         newGraph.removeVertex("D");
         newGraph.printGraph();
+        Heap newHeap = new Heap();
+        newHeap.insert(99);
+         newHeap.insert(72);
+         newHeap.insert(61);
+         newHeap.insert(58);
+
+         System.out.println( newHeap.getHeap());
+         newHeap.insert(100);
+         System.out.println(newHeap.getHeap());
+         newHeap.insert(75);
+         System.out.println(newHeap.getHeap());
 
 
 
