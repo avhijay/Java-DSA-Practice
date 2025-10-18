@@ -49,6 +49,49 @@ public class Heap {
         }
 
     }
+    public Integer remove() {
+        if  (heap.size()==0)return null;
+
+        if (heap.size()==1){
+            return  heap.remove(0);
+        }
+
+        int maxValue = heap.get(0);
+        heap.set(0,heap.remove(heap.size()-1));
+        sinkDown(0);
+        return maxValue;
+
+
+
+    }
+
+    public  void sinkDown(int index){
+        int maxIndex = index;
+        while(true){
+          int leftChild =  leftChild(index);
+          int rightChild = rightChild(index);
+
+          if(leftChild<heap.size() && heap.get(leftChild)>heap.get(maxIndex)){
+              maxIndex=leftChild;
+
+
+          }
+          if(rightChild<heap.size()&&  heap.get(rightChild)>heap.get(maxIndex)){
+              maxIndex=rightChild;
+          }
+
+
+          if (maxIndex!=index){
+              swap(index,maxIndex);
+              index=maxIndex;
+
+          }else{
+              return;
+          }
+
+
+        }
+    }
 
 
 
