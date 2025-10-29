@@ -39,15 +39,17 @@ DoublyLinkedList newOne = new DoublyLinkedList(9);
 //         newStack.printStack();
 
 
-         //BINARY SEARCH TREE:
-//         BinarySearchTree newTree = new BinarySearchTree();
-//         System.out.println("Root is :  "+ newTree.root);
-//         newTree.insert(47);
-//         newTree.insert(21);
-//         newTree.insert(76);
-//         newTree.insert(18);
-//         newTree.insert(52);
-//         newTree.insert(82);
+//         BINARY SEARCH TREE:
+         BinarySearchTree newTree = new BinarySearchTree();
+         System.out.println("Root is :  "+ newTree.root);
+         newTree.insert(47);
+         newTree.insert(21);
+         newTree.insert(76);
+         newTree.insert(18);
+         newTree.insert(52);
+         newTree.insert(82);
+
+         System.out.println( newTree.recursiveContains(50));
 //
 //
 //         System.out.println("Root is :  "+ newTree.root);
@@ -58,16 +60,16 @@ DoublyLinkedList newOne = new DoublyLinkedList(9);
 
 
          // HASH TABLE:
-         HashTable newHash = new HashTable();
-
-
-        newHash.set("Mangoes",600);
-        newHash.set("Apple",89);
-         newHash.set("Litchi",788);
-//         newHash.printHash();
-         newHash.set("Grapes",655);
-         newHash.set("MILK",87);
-         newHash.set("Banana", 120);
+//         HashTable newHash = new HashTable();
+//
+//
+//        newHash.set("Mangoes",600);
+//        newHash.set("Apple",89);
+//         newHash.set("Litchi",788);
+////         newHash.printHash();
+//         newHash.set("Grapes",655);
+//         newHash.set("MILK",87);
+//         newHash.set("Banana", 120);
 //         newHash.set("Orange", 340);
 //         newHash.set("Pineapple", 999);
 //         newHash.set("Strawberry", 150);
@@ -101,36 +103,36 @@ DoublyLinkedList newOne = new DoublyLinkedList(9);
 
 
 //----Graph---
-
-         Graph newGraph = new Graph();
-         newGraph.addVertex("A");
-         newGraph.addVertex("B");
-         newGraph.addVertex("C");
-         newGraph.addVertex("D");
-
-
-         newGraph.addEdge("A","B");
-         newGraph.addEdge("A","C");
-         newGraph.addEdge("A","D");
-         newGraph.addEdge("B","D");
-         newGraph.addEdge("C","D");
-         newGraph.printGraph();
-
-//         newGraph.removeEdge("A","B");
-
-        newGraph.removeVertex("D");
-        newGraph.printGraph();
-        Heap newHeap = new Heap();
-        newHeap.insert(95);
-         newHeap.insert(75);
-         newHeap.insert(80);
-         newHeap.insert(55);
-         newHeap.insert(60);
-         newHeap.insert(50);
-         newHeap.insert(65);
-         System.out.println(newHeap.getHeap());
-         newHeap.remove();
-         System.out.println(newHeap.getHeap());
+//
+//         Graph newGraph = new Graph();
+//         newGraph.addVertex("A");
+//         newGraph.addVertex("B");
+//         newGraph.addVertex("C");
+//         newGraph.addVertex("D");
+//
+//
+//         newGraph.addEdge("A","B");
+//         newGraph.addEdge("A","C");
+//         newGraph.addEdge("A","D");
+//         newGraph.addEdge("B","D");
+//         newGraph.addEdge("C","D");
+//         newGraph.printGraph();
+//
+////         newGraph.removeEdge("A","B");
+//
+//        newGraph.removeVertex("D");
+//        newGraph.printGraph();
+//        Heap newHeap = new Heap();
+//        newHeap.insert(95);
+//         newHeap.insert(75);
+//         newHeap.insert(80);
+//         newHeap.insert(55);
+//         newHeap.insert(60);
+//         newHeap.insert(50);
+//         newHeap.insert(65);
+//         System.out.println(newHeap.getHeap());
+//         newHeap.remove();
+//         System.out.println(newHeap.getHeap());
 
 
 
