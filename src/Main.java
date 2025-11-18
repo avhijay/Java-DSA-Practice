@@ -22,7 +22,7 @@ public  class  Main {
 
 
 //DOUBLE LINKED LIST :
-DoublyLinkedList newOne = new DoublyLinkedList(9);
+//DoublyLinkedList newOne = new DoublyLinkedList(9);
 //newOne.getTail();
 //newOne.append(10);
 //newOne.append(11);
@@ -41,15 +41,28 @@ DoublyLinkedList newOne = new DoublyLinkedList(9);
 
 //         BINARY SEARCH TREE:
          BinarySearchTree newTree = new BinarySearchTree();
-         System.out.println("Root is :  "+ newTree.root);
-         newTree.insert(47);
-         newTree.insert(21);
-         newTree.insert(76);
-         newTree.insert(18);
-         newTree.insert(52);
-         newTree.insert(82);
 
-         System.out.println( newTree.recursiveContains(50));
+         newTree.insert(2);
+         newTree.insert(1);
+         newTree.insert(3);
+//         newTree.insert(18);
+//         newTree.insert(52);
+//         newTree.insert(82);
+         System.out.println("Root is :  "+ newTree.root.value);
+         System.out.println("Root.right : "+newTree.root.right.value);
+         System.out.println("Root.left : "+newTree.root.left.value);
+
+         newTree.deleteNode(2);
+         System.out.println("After delete ");
+         System.out.println("Root.right : "+newTree.root.right);
+         System.out.println("Root.left : "+newTree.root.left.value);
+
+
+
+//         System.out.println(newTree.minValue(newTree.root));
+//         System.out.println(newTree.minValue(newTree.root.right));
+
+//         System.out.println( newTree.recursiveContains(50));
 //
 //
 //         System.out.println("Root is :  "+ newTree.root);

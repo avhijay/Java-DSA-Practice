@@ -101,6 +101,59 @@ public  void recursiveInsert(int value){
 }
 
 
+public int minValue(Node currentNode){
+        while (currentNode.left!=null){
+            currentNode = currentNode.left;
+
+        }
+        return currentNode.value;
+}
+
+
+
+
+private  Node deleteNode(Node currentNode , int value ){
+
+        if (currentNode==null)return null;
+
+        if(value< currentNode.value){
+           currentNode.left = deleteNode(currentNode.left,value);
+
+        } else if (value>currentNode.value) {
+            currentNode.right=deleteNode(currentNode.right,value);
+
+        }else{
+            if(currentNode.left==null && currentNode.right==null){
+                return  null ;
+            }
+
+
+            // if node has a node in either left or right
+            else if (currentNode.left == null){
+                currentNode =currentNode.right;
+            } else if (currentNode.right==null) {
+                currentNode = currentNode.left;
+
+            }else{
+                // if the node to be deleted has both left , right child
+                int subTreeMinValue = minValue(currentNode.right);
+                currentNode.value=subTreeMinValue;
+                currentNode.right=deleteNode(currentNode.right,subTreeMinValue);
+            }
+
+
+
+
+        }
+    return currentNode;
+
+
+}
+public void deleteNode(int value){
+      root =  deleteNode(root,value);
+}
+
+
 
 
 }
