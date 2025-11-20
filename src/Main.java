@@ -42,20 +42,30 @@ public  class  Main {
 //         BINARY SEARCH TREE:
          BinarySearchTree newTree = new BinarySearchTree();
 
-         newTree.insert(2);
-         newTree.insert(1);
-         newTree.insert(3);
+         newTree.insert(47);
+         newTree.insert(21);
+         newTree.insert(76);
+         newTree.insert(18);
+         newTree.insert(27);
+         newTree.insert(52);
+         newTree.insert(82);
+
+
+
+//         System.out.println( newTree.BFS());
+//         System.out.println(newTree.DFSPreOrder() );
+         System.out.println(newTree.DFSPostOrder());
 //         newTree.insert(18);
 //         newTree.insert(52);
 //         newTree.insert(82);
-         System.out.println("Root is :  "+ newTree.root.value);
-         System.out.println("Root.right : "+newTree.root.right.value);
-         System.out.println("Root.left : "+newTree.root.left.value);
-
-         newTree.deleteNode(2);
-         System.out.println("After delete ");
-         System.out.println("Root.right : "+newTree.root.right);
-         System.out.println("Root.left : "+newTree.root.left.value);
+//         System.out.println("Root is :  "+ newTree.root.value);
+//         System.out.println("Root.right : "+newTree.root.right.value);
+//         System.out.println("Root.left : "+newTree.root.left.value);
+//
+//         newTree.deleteNode(2);
+//         System.out.println("After delete ");
+//         System.out.println("Root.right : "+newTree.root.right);
+//         System.out.println("Root.left : "+newTree.root.left.value);
 
 
 

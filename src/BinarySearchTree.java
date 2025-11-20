@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinarySearchTree {
     Node root;
 
@@ -101,23 +105,23 @@ public  void recursiveInsert(int value){
 }
 
 
-public int minValue(Node currentNode){
+    public int minValue(Node currentNode){
         while (currentNode.left!=null){
             currentNode = currentNode.left;
 
         }
         return currentNode.value;
-}
+    }
 
 
 
 
-private  Node deleteNode(Node currentNode , int value ){
+    private  Node deleteNode(Node currentNode , int value ){
 
         if (currentNode==null)return null;
 
         if(value< currentNode.value){
-           currentNode.left = deleteNode(currentNode.left,value);
+            currentNode.left = deleteNode(currentNode.left,value);
 
         } else if (value>currentNode.value) {
             currentNode.right=deleteNode(currentNode.right,value);
@@ -145,13 +149,125 @@ private  Node deleteNode(Node currentNode , int value ){
 
 
         }
-    return currentNode;
+        return currentNode;
+
+
+    }
+    public void deleteNode(int value){
+        root =  deleteNode(root,value);
+    }
+
+
+    // TREE TRAVERSAL
+
+public ArrayList<Integer> BFS(){
+        Node currentNode = root;
+
+    Queue<Node> queue = new LinkedList<>();
+        ArrayList<Integer> output = new ArrayList<>();
+        queue.add(currentNode);
+
+        while (!queue.isEmpty()){
+            currentNode=queue.remove();
+            output.add(currentNode.value);
+
+
+
+
+            if (currentNode.left!=null){
+                queue.add(currentNode.left);
+            }
+            if (currentNode.right!=null){
+                queue.add(currentNode.right);
+            }
+
+
+        }
+
+
+   return output;
+}
+
+public ArrayList<Integer>DFSPreOrder(){
+        ArrayList<Integer>output = new ArrayList<>();
+
+        class Traverse{
+            Traverse(Node currentNode){
+                output.add(currentNode.value);
+
+                if(currentNode.left!=null){
+                    new Traverse(currentNode.left);
+                }
+                if (currentNode.right!=null){
+                    new Traverse(currentNode.right);
+                }
+
+            }
+
+        }
+        new Traverse(root);
+        return  output;
+
+
+
 
 
 }
-public void deleteNode(int value){
-      root =  deleteNode(root,value);
+
+
+public ArrayList<Integer>DFSPostOrder(){
+        ArrayList<Integer>output = new ArrayList<>();
+
+        class Traversal{
+             Traversal(Node currentNode){
+                 if (currentNode.left!=null){
+                     new Traversal(currentNode.left);
+                 }
+                 if (currentNode.right!=null){
+                     new Traversal(currentNode.right);
+                 }
+                 output.add(currentNode.value);
+
+
+
+
+            }
+
+        }
+
+
+new Traversal(root);
+return output;
+
+
 }
+
+public ArrayList<Integer>DFSInOrder(){
+        ArrayList<Integer>output= new ArrayList<>();
+
+        class Traverse{
+            Traverse(Node currentNode){
+
+
+                if(currentNode.left!=null){
+                   new Traverse(currentNode.left);
+                }
+                output.add(currentNode.value);
+
+                if (currentNode.right!=null){
+                  new  Traverse(currentNode.right);
+                }
+
+            }
+        }
+        new Traverse(root);
+        return output;
+
+}
+
+
+
+
 
 
 
