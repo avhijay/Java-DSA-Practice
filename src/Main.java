@@ -1,7 +1,3 @@
-import javax.naming.NamingEnumeration;
-import java.sql.SQLOutput;
-
-
 public  class  Main {
      public static void main(String[] args) {
 
@@ -156,6 +152,13 @@ public  class  Main {
 //         System.out.println(newHeap.getHeap());
 //         newHeap.remove();
 //         System.out.println(newHeap.getHeap());
+
+
+
+         int[]array1 = {4,7,1,3};
+
+         ArraysExamples myExample = new ArraysExamples();
+         System.out.println( myExample.twoSumSortedTwoPointerApproach (array1 , 10));
 
 
 

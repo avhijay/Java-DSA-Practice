@@ -267,6 +267,46 @@ public ArrayList<Integer>DFSInOrder(){
 
 
 
+    private Node sortedArrayToBST(int [] num , int left , int right ){
+        if(num==null) return null ;
+        if (left> right ) return null;
+
+        int midIndex = left+(right-left)/2; // to be sure and avoid overflow in-case of large data  
+        Node currentNode = new Node(num[midIndex]);
+        currentNode.left=sortedArrayToBST(num ,  left , midIndex-1);
+        currentNode.right = sortedArrayToBST( num ,  midIndex+1 ,  right);
+        return currentNode;
+
+
+
+
+
+
+
+
+    }
+
+    private Node invertBST(Node rootNode ){
+
+        if (rootNode==null) return  null;
+
+
+        Node tempLeft = rootNode.left;
+
+        rootNode.left=invertBST(rootNode.right);
+        rootNode.right=invertBST(tempLeft);
+
+        return  rootNode;
+
+    }
+
+    public void invertBST(){
+
+            root = invertBST(root);
+
+    }
+
+
 
 
 

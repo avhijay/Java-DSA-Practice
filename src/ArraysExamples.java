@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class ArraysExamples {
 
@@ -79,6 +77,57 @@ return  maxSum;
 
 
 }
+public Boolean twoSumSortedHashApproach(int[] num , int target ){
+      HashMap<Integer,Integer> newMap = new HashMap<>();
+        for (int i = 0 ; i < num.length ; i++){
+            int required = target-num[i];
+            if (newMap.get(required)!=null){
+                return true ;
+            }else{
+                newMap.put(num[i],i);
+            }
+
+        }
+
+return  false;
+
+
+
+}
+
+public  Boolean twoSumSortedTwoPointerApproach(int[] num , int target  ){
+
+        int left = 0 ;
+        int right = num.length-1;
+
+        while (left<right){
+            int requiredSum = num[left]+num[right];
+
+
+            if (requiredSum==target){
+                return true;
+            }
+
+
+            if (requiredSum<target){
+                left++;
+            }else{
+                right--;
+            }
+
+
+
+
+
+
+
+
+
+        }
+    return  false;
+
+}
+
 
 
 
