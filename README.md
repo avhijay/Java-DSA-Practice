@@ -4,21 +4,14 @@ This repository contains my practice code for learning Data Structures and Algor
 I am using IntelliJ IDEA for coding the basics and building my own implementations.
 
 ## What's inside
-- **Linked List** 
-- **Doubly Linked List**
-- **Stack**
-- **Queue**
-- **Array**
-- **Binary Search Tree**
-- **Hash table**
-- **Heap**
-- **Graph**
-- **Threads**
-- **ReentrantLock**
-- **Synchronization**
-- **WaitNotify**
-- **ConcurrentHashMap**
-- **Tree Traversal**
+- Linked List 
+- Doubly Linked List
+- Stack
+- Queue
+- Binary Search Tree
+- Hash table
+- String operations (reverse, palindrome, etc.)
+- A main class to test/run everything
 
 ## Why this repo exists
 I created this to practice the fundamentals of DSA by writing code from scratch.  

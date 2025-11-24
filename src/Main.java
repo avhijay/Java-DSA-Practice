@@ -155,10 +155,12 @@ public  class  Main {
 
 
 
-         int[]array1 = {4,7,1,3};
+         int[]array1 = {0,1,0,3,12};
 
          ArraysExamples myExample = new ArraysExamples();
-         System.out.println( myExample.twoSumSortedTwoPointerApproach (array1 , 10));
+         myExample.moveZeroes(array1);
+         myExample.printArray(array1);
+//         System.out.println( myExample.twoSumSortedTwoPointerApproach (array1 , 10));
 
 
 
