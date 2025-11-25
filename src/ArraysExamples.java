@@ -211,7 +211,7 @@ public void sortColors(int [] num){
 
 
 
-public int[] FirstAndLastPosition(int [] nums , int target ){
+public int[] firstAndLastPosition(int [] nums , int target ){
 
 
     int left = 0 ;
@@ -219,10 +219,6 @@ public int[] FirstAndLastPosition(int [] nums , int target ){
     int start = -1;
     int end = -1;
 // do 2 binary search and when  value == target then in one binary search move left , and in the other move right
-
-
-
-
     while(left<=right){
         int mid = left+(right-left)/2;
 
@@ -240,7 +236,6 @@ public int[] FirstAndLastPosition(int [] nums , int target ){
         }
 
     }
-
     left = 0;
     right = nums.length - 1;
 
