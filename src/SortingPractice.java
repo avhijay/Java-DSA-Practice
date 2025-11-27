@@ -106,20 +106,69 @@ public static int [] merge( int [] num1  , int [] num2  ){
  }
 
 
- public static void main (String [] args ){
 
-    int [] newOne = {2,4,7,8,9,1,8,3,7};
+ public static void swap(int [] array , int index1 ,  int index2){
+    int temp = array[index1];
+    array[index1]=array[index2];
+    array[index2] = temp;
 
-   int []  output = mergeSort(newOne);
-     System.out.println(Arrays.toString(output));
 
 
  }
 
 
+ public static int  pivot ( int [] array1 , int pivotIndexPointer , int endIndex){
+
+    int swapIndex = pivotIndexPointer;
+    for(int i = pivotIndexPointer+1; i <=endIndex;i++) {
+        if (array1[i] < array1[pivotIndexPointer]) {
+            swapIndex++;
+            swap(array1,i,swapIndex);
+
+        }
+    }
+        swap(array1,pivotIndexPointer,swapIndex);
+    return swapIndex;
+
+ }
+
+  public static void quickSortHelper( int [] array , int left , int right ) {
+
+      if (left < right) {
+          int pivotIndex = pivot(array, left, right);
+          quickSortHelper(array, left, pivotIndex - 1);
+          quickSortHelper(array, pivotIndex + 1, right);
+      }
+
+  }
+    public static void quickSort(int[]array) {
+
+    quickSortHelper(array,0,array.length-1);
+    }
 
 
+
+
+
+
+    public static void main (String [] args ){
+
+        int [] newOne = {2,4,7,8,9,1,8,3,7};
+
+      quickSort(newOne);
+        System.out.println(Arrays.toString(newOne));
+
+
+    }
 
 
 
 }
+
+
+
+
+
+
+
+
