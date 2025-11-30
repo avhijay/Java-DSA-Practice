@@ -262,13 +262,82 @@ public int[] firstAndLastPosition(int [] nums , int target ){
 
 
 
-
-
-
-
-
-
 }
+
+
+
+    public List<ArrayList<Integer>>threeSum(int[] array1) {
+        Arrays.sort(array1);
+
+        int right = 0;
+        int mid = 0;
+        List<ArrayList<Integer>> output = new ArrayList<>();
+
+        for(int i = 0; i< array1.length - 2; i ++){
+            if( i==0 ||  array1[i]!= array1[i-1]){
+                int required = -array1[i];
+                mid = i+1;
+                right = array1.length-1;
+
+                while   ( mid< right ){
+
+                    int currentTotal = array1[mid]+ array1[right];
+                    if(currentTotal<required){
+
+
+                        while(    mid < right  &&  array1[mid+1]== array1[mid]   ){
+                            mid++;
+                        }
+
+                        mid++;
+                    }
+
+
+                    else if(currentTotal > required){
+
+                        while(   right > mid && array1[right-1]== array1[right] ){
+                            right--;
+                        }
+
+                        right--;
+
+                    }
+
+
+                    else if(currentTotal==required){
+                        ArrayList<Integer> newOne  = new ArrayList<>();
+                        newOne.add(array1[i]);
+                        newOne.add(array1[mid]);
+                        newOne.add(array1[right]);
+                        output.add(newOne);
+
+                        while(   right > mid && array1[right-1]== array1[right] ){
+                            right--;
+                        }
+                        while(    mid < right  &&  array1[mid+1]== array1[mid]   ){
+                            mid++;
+                        }
+
+                        mid++;
+                        right--;
+                    }
+                }
+
+            }
+
+
+        }
+        return output;
+
+    }
+
+
+
+
+
+
+
+
 
 }
 
